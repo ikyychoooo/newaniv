@@ -1,0 +1,192 @@
+@media (max-width: 600px) {
+  .opening-box h1 {
+    font-size: 36px;
+  }
+
+  .opening-box p {
+    font-size: 18px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,192,203,0.3), transparent 40%),
+    linear-gradient(135deg, #ff6a88, #ff99ac, #ffc3d1);
+}
+body::after {
+  content: "💖 💕 💗 💓 💞";
+  position: fixed;
+  font-size: 80px;
+  opacity: 0.05;
+  top: 20%;
+  left: 10%;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+@keyframes bgGerak {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.text-container,
+.opening-box,
+.ending {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+.opening-box {
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 85%;
+  max-width: 320px;
+}
+.opening {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: #ff4e8a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.main {
+  display: none;
+  padding: 20px;
+}
+.text-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+}
+.gallery {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.gallery img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s;
+}
+.ending {
+  margin-top: 80px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ending h1 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.kiss {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  animation: pulse 1.5s infinite;
+}
+
+.from {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* animasi lucu */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.ending {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+.video-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.video-container video {
+  width: 90%;
+  max-width: 350px;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+.sparkle {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: sparkle 3s linear infinite;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0); opacity: 0.7; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 0.8;
+  animation: blink 2s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
